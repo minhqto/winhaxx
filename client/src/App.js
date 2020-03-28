@@ -7,17 +7,17 @@ import "./App.css";
 import Dashboard from "./components/dashboard/Dashboard";
 
 const App = () => {
-	return (
-		<Router>
-			<Fragment>
-				<Navbar />
-				<Switch>
-					<Route exact path="/" component={Landing} />
-					<Route exact path="/dashboard" component={Dashboard} />
-				</Switch>
-			</Fragment>
-		</Router>
-	);
+  return (
+    <Router>
+      <Fragment>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/dashboard" component={Dashboard} />
+        </Switch>
+      </Fragment>
+    </Router>
+  );
 };
 
 export default App;
