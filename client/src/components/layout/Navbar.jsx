@@ -17,7 +17,9 @@ function CustomNavbar() {
 	const toggle = () => setIsOpen(!isOpen);
 	return (
 		<Navbar style={{ backgroundColor: "#FFF6EC" }} light expand="md">
-			<NavbarBrand href="/">Stash</NavbarBrand>
+			<NavbarBrand className="stashFont" href="/">
+				stash
+			</NavbarBrand>
 			<NavbarToggler onClick={toggle} />
 			<Collapse isOpen={isOpen} style={{ float: "right" }} navbar>
 				<Nav className="ml-auto" navbar>
@@ -28,24 +30,18 @@ function CustomNavbar() {
 								marginRight: "20px"
 							}}
 						>
-							<Link
-								style={{
-									textDecoration: "none",
-									color: "#185287"
-								}}
-								to="/signin"
-							>
+							<Link className="stashFont" to="/signin">
 								LOG IN
 							</Link>
 						</NavLink>
 					</NavItem>
-
 					<NavItem>
 						<Button style={{ backgroundColor: "#185287" }}>
 							<Link
 								style={{
 									textDecoration: "none",
-									color: "white"
+									color: "white",
+									font: "Merriweather"
 								}}
 								to="/signup"
 							>
