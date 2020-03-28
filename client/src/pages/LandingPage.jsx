@@ -1,69 +1,66 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button, Row, Container, Col } from "reactstrap";
 
-<<<<<<< HEAD:client/src/pages/LandingPage.jsx
 const LandingPage = () => {
   return (
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="stash">stash</h1>
-          <p>Find your neighbourhood friendly essentials!</p>
+          <h1 className="need">Get what you need.</h1>
+          {/* <div>
+            <Button style={{ backgroundColor: "#185287" }}>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white"
+                }}
+                to="/signup"
+              >
+                SIGN UP
+              </Link>
+            </Button>
+            <Button
+              style={{
+                backgroundColor: "white",
+                marginLeft: "20px"
+              }}
+            >
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "185287"
+                }}
+                to="/signin"
+              >
+                LOG IN
+              </Link>
+            </Button>
+          </div> */}
           <div>
-            <Button className="buttons" variant="primary" href="#">
-              Register
-            </Button>
-            <Button className="buttons" variant="light" href="/dashboard">
-              Go to Dashboard
-            </Button>
+            <img className="boxman" src={require("../img/boxman.jpg")}></img>
           </div>
+          <div>
+            <p className="desc">
+              We help connect small businesses selling essential goods deliver
+              their products and words words words words words words words words
+              words words words words words words words fast delivery
+            </p>
+          </div>
+          <Container>
+            <Row className="buyerOrSeller">
+              <Col sm={{ size: 5 }}>
+                <Button color="secondary">I'm a buyer</Button>
+              </Col>
+              <Col sm={{ size: 5 }}>
+                <Button color="primary">I'm a store owner</Button>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
     </section>
   );
-=======
-const HomePage = () => {
-	return (
-		<section className="landing">
-			<div className="dark-overlay">
-				<div className="landing-inner">
-					<h1>Winhacksss</h1>
-					<p>Fight against Covid19</p>
-					<div>
-						<Button style={{ backgroundColor: "#185287" }}>
-							<Link
-								style={{
-									textDecoration: "none",
-									color: "white"
-								}}
-								to="/signup"
-							>
-								SIGN UP
-							</Link>
-						</Button>
-						<Button
-							style={{
-								backgroundColor: "white",
-								marginLeft: "20px"
-							}}
-						>
-							<Link
-								style={{
-									textDecoration: "none",
-									color: "185287"
-								}}
-								to="/signin"
-							>
-								LOG IN
-							</Link>
-						</Button>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
->>>>>>> 37aa3e7b10705df4a1fb35a2a4334f5e911dd789:client/src/pages/HomePage.jsx
 };
 
 export default LandingPage;

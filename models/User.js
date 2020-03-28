@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
-<<<<<<< HEAD
   first_name: {
     type: String,
     required: true
@@ -34,12 +33,6 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   }
-=======
-	name: {
-		type: String,
-		required: true
-	}
->>>>>>> 37aa3e7b10705df4a1fb35a2a4334f5e911dd789
 });
 
 module.exports = User = mongoose.model("users", UserSchema);

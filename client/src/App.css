@@ -35,7 +35,7 @@
   padding: 1rem 0;
 }
 
-.stash {
+.stashFont {
   position: relative;
   font-family: Merriweather;
   font-style: normal;
@@ -48,4 +48,48 @@
 .navbarCustom {
   position: absolute;
   color: #fff6ec;
+}
+
+.need {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 80px;
+  color: #000000;
+  position: absolute;
+  width: 30%;
+  height: 168px;
+  left: 10%;
+  top: 10%;
+}
+
+.boxman {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  left: 50%;
+  top: 15%;
+}
+
+.desc {
+  position: absolute;
+  width: 336px;
+  height: 116px;
+  left: 128px;
+  top: 45%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+}
+
+.buyerOrSeller {
+  position: absolute;
+  left: 15%;
+  top: 65%;
 }
