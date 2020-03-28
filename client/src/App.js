@@ -6,19 +6,23 @@ import "./App.css";
 
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 
 const App = () => {
-  return (
-    <Router>
-      <Fragment>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/dashboard" component={Dashboard} />
-        </Switch>
-      </Fragment>
-    </Router>
-  );
+	return (
+		<Router>
+			<Fragment>
+				<Navbar />
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route exact path="/dashboard" component={Dashboard} />
+					<Route exact path="/signup" component={SignUp} />
+					<Route exact path="/signin" component={SignIn} />
+				</Switch>
+			</Fragment>
+		</Router>
+	);
 };
 
 export default App;
