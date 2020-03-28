@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const StoreSchema = new mongoose.Schema({
+const storeSchema = new Schema({
 	storeName: String,
 	first_name: String,
 	last_name: String,
@@ -12,8 +13,10 @@ const StoreSchema = new mongoose.Schema({
 	city: String,
 	province: String,
 	country: String,
+	storeId: String,
 	inventory: [
 		{
+			storeId: String,
 			itemName: String,
 			desc: String,
 			quantity: Number,
@@ -22,4 +25,4 @@ const StoreSchema = new mongoose.Schema({
 	]
 });
 
-module.exports = Store = mongoose.model("stores", StoreSchema);
+module.exports = Store = mongoose.model("stashdb_vendors", storeSchema);
