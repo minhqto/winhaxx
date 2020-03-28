@@ -5,16 +5,19 @@ import NavbarTop from "./components/layout/Navbar";
 import "./App.css";
 
 import Dashboard from "./pages/Dashboard";
-import LandingPage from "./pages/LandingPage";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 
 const App = () => {
   return (
     <Router>
       <Fragment>
-        <NavbarTop></NavbarTop>
+        <Navbar />
         <Switch>
-          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/signin" component={SignIn} />
         </Switch>
       </Fragment>
     </Router>

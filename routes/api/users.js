@@ -7,11 +7,11 @@ const User = require("../../models/User");
 // @desc     Get users
 // @access   Public
 router.get("/", (req, res) => {
-  User.find({}, (err, users) => {
-    {
-      res.json(users);
-    }
-  });
+	User.find({}, (err, users) => {
+		{
+			res.json(users);
+		}
+	});
 });
 
 module.exports = router;
