@@ -2,19 +2,23 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-const Landing = () => {
+const HomePage = () => {
 	return (
 		<section className="landing">
 			<div className="dark-overlay">
 				<div className="landing-inner">
-					<h1>MERN Stack Boilerplate</h1>
-					<p>A boilerplate for building web apps with MERN stack</p>
+					<h1>Winhacksss</h1>
+					<p>Fight against Covid19</p>
 					<div>
 						<Button className="buttons" variant="primary" href="#">
 							Register
 						</Button>
-						<Button className="buttons" variant="light" href="#">
-							Sign In
+						<Button
+							className="buttons"
+							variant="light"
+							href="/dashboard"
+						>
+							Go to Dashboard
 						</Button>
 					</div>
 				</div>
@@ -23,4 +27,4 @@ const Landing = () => {
 	);
 };
 
-export default Landing;
+export default HomePage;
