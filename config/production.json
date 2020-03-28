@@ -1,4 +1,4 @@
 {
-	"mongoURI": "mongodb+srv://admin:admin@qvnguyen-web322-2e9nt.mongodb.net/winhacks?retryWrites=true&w=majority",
-	"jwtSecret": "mysecrettoken"
+  "mongoURI": "mongodb+srv://stashdbuser:winhaxx2020@stashdb-u3d0a.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }

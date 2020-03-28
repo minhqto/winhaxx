@@ -2,11 +2,13 @@ const express = require("express");
 const db = require("./config/db");
 const path = require("path");
 const app = express();
+const store = require("./routes/api/store.js");
 
 // Connect Database
 db.connectDB()
   .then(msg => {
     console.log(msg);
+    //store.save();
   })
   .catch(err => {
     console.log(err);
