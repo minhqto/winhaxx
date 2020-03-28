@@ -7,7 +7,7 @@ const LandingPage = () => {
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="need">Get what you need.</h1>
+          <h1 className="need">Our stash to yours.</h1>
           {/* <div>
             <Button style={{ backgroundColor: "#185287" }}>
               <Link
@@ -42,18 +42,26 @@ const LandingPage = () => {
           </div>
           <div>
             <p className="desc">
-              We help connect small businesses selling essential goods deliver
-              their products and words words words words words words words words
-              words words words words words words words fast delivery
+              We help connect micro-businesses selling essential goods deliver
+              their products to those close around them. Help local businesses
+              and get the items you need during difficult times.
             </p>
           </div>
           <Container>
             <Row className="buyerOrSeller">
               <Col sm={{ size: 5 }}>
-                <Button color="secondary">I'm a buyer</Button>
+                <Button color="secondary">
+                  <a className="hyperlink" href="">
+                    I'm a buyer
+                  </a>
+                </Button>
               </Col>
               <Col sm={{ size: 5 }}>
-                <Button color="primary">I'm a store owner</Button>
+                <Button color="primary">
+                  <a className="hyperlink" href="">
+                    I'm a store owner
+                  </a>
+                </Button>
               </Col>
             </Row>
           </Container>
