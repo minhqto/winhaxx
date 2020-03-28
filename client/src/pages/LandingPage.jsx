@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button } from "reactstrap";
 
-const HomePage = () => {
+const LandingPage = () => {
   return (
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1>Winhacksss</h1>
-          <p>Fight against Covid19</p>
+          <h1 className="stash">stash</h1>
+          <p>Find your neighbourhood friendly essentials!</p>
           <div>
             <Button className="buttons" variant="primary" href="#">
               Register
@@ -23,4 +23,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LandingPage;

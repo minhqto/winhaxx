@@ -22,7 +22,10 @@
 		"jsonwebtoken": "^8.5.1",
 		"mongodb": "^3.5.5",
 		"mongoose": "^5.9.6",
+		"react": "^16.13.1",
 		"react-bootstrap": "^1.0.0-beta.16",
+		"react-dom": "^16.13.1",
+		"reactstrap": "^8.4.1",
 		"request": "^2.88.0"
 	},
 	"devDependencies": {

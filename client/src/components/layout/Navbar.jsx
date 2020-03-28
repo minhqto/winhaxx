@@ -1,7 +1,8 @@
 import React from "react";
+import { Navbar } from "reactstrap";
 
-function Navbar() {
-	return <div>Navbar Component</div>;
+function NavbarTop() {
+  return <Navbar className="navbarCustom">stash</Navbar>;
 }
 
-export default Navbar;
+export default NavbarTop;
