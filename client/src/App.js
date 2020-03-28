@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
 
 import "./App.css";
-import Dashboard from "./components/dashboard/Dashboard";
+
+import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <Fragment>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/dashboard" component={Dashboard} />
         </Switch>
       </Fragment>
