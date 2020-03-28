@@ -1,6 +1,31 @@
 const mongoose = require("mongoose");
 const config = require("config");
-const db = config.get("mongoURI");
+const db = "monb";
+const Schema = mongoose.Schema;
+
+const itemSchema = new Schema({});
+
+const storeSchema = new Schema({
+  storeName: String,
+  first_name: String,
+  last_name: String,
+  phone: Number,
+  business_num: Number,
+  street_num: Number,
+  address: String,
+  postal: String,
+  city: String,
+  province: String,
+  country: String,
+  inventory: [
+    {
+      itemName: String,
+      desc: String,
+      quantity: Number,
+      price: Number
+    }
+  ]
+});
 
 const connectDB = async () => {
   try {
