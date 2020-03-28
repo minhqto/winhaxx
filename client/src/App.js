@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import BusinessInformation from "./pages/BusinessInformation";
 
 const App = () => {
 	return (
@@ -19,6 +20,11 @@ const App = () => {
 					<Route exact path="/dashboard" component={Dashboard} />
 					<Route exact path="/signup" component={SignUp} />
 					<Route exact path="/signin" component={SignIn} />
+					<Route
+						exact
+						path="/business-information"
+						component={BusinessInformation}
+					/>
 				</Switch>
 			</Fragment>
 		</Router>

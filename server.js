@@ -1,22 +1,18 @@
 const express = require("express");
-const connectDB = require("./config/db");
+const db = require("./config/db");
 const path = require("path");
 const app = express();
 const store = require("./routes/api/store.js");
 
 // Connect Database
-<<<<<<< HEAD
-connectDB();
-=======
 db.connectDB()
-  .then(msg => {
-    console.log(msg);
-    //store.save();
-  })
-  .catch(err => {
-    console.log(err);
-  });
->>>>>>> c13ad2c993830891c1bcf5adfdf41c06d07655a8
+	.then(msg => {
+		console.log(msg);
+		//store.save();
+	})
+	.catch(err => {
+		console.log(err);
+	});
 
 // Init Middleware
 app.use(express.json({ extended: false }));
