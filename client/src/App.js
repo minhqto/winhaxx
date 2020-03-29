@@ -11,6 +11,7 @@ import LandingPage from "./pages/LandingPage";
 import BusinessInformation from "./pages/BusinessInformation";
 import BuyerInfo from "./pages/BuyerInfo";
 import Storefront from "./pages/Storefront";
+import Orders from "./pages/Orders";
 
 export const AppContext = React.createContext({});
 
@@ -37,6 +38,7 @@ const App = () => {
             <Route exact path="/business" component={BusinessInformation} />
             <Route exact path="/buyer" component={BuyerInfo} />
             <Route exact path="/Storefront" component={Storefront} />
+            <Route exact path="/orders" component={Orders} />
           </Switch>
         </Fragment>
       </Router>
