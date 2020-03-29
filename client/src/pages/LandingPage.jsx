@@ -51,16 +51,29 @@ const LandingPage = () => {
             <Row className="buyerOrSeller">
               <Col sm={{ size: 5 }}>
                 <Button color="secondary">
-                  <a className="hyperlink" href="">
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "white"
+                    }}
+                    to="/buyer"
+                  >
                     I'm a buyer
-                  </a>
+                  </Link>
                 </Button>
               </Col>
               <Col sm={{ size: 5 }}>
                 <Button color="primary">
-                  <a className="hyperlink" href="">
+                  {/* does not refresh the state */}
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "white"
+                    }}
+                    to="/business"
+                  >
                     I'm a store owner
-                  </a>
+                  </Link>
                 </Button>
               </Col>
             </Row>
