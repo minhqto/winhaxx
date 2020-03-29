@@ -15,7 +15,7 @@ const LandingPage = () => {
 							src={require("../img/boxman.jpg")}
 						></img>
 					</div>
-					<div>
+					<div style={{ textAlign: "center", width: "100%" }}>
 						<p className="desc">
 							We help connect micro-businesses selling essential
 							goods deliver their products to those close around
@@ -33,7 +33,10 @@ const LandingPage = () => {
 									}}
 									to="/buyer"
 								>
-									<Button color="secondary">
+									<Button
+										color="secondary"
+										style={{ width: "150px" }}
+									>
 										I'm a buyer
 									</Button>
 								</Link>
@@ -47,7 +50,13 @@ const LandingPage = () => {
 									}}
 									to="/business"
 								>
-									<Button color="primary">
+									<Button
+										color="primary"
+										style={{
+											width: "150px",
+											marginLeft: "20px"
+										}}
+									>
 										I'm a store owner
 									</Button>
 								</Link>

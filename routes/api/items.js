@@ -18,34 +18,35 @@ router.get("/", (req, res) => {
 // @route    POST api/items
 // @desc     Get all items close to the current user <= 5km
 // @access   Public
-// router.post("/", (req, res) => {
-// 	let currentUserGeoLocation = req.body.userGeoLocation;
-// 	let itemsAround = [];
+router.post("/", (req, res) => {
+	let currentUserGeoLocation = req.body.userGeoLocation;
+	let itemsAround = [];
 
-// 	Store.find({}, (err, store) => {
-// 		let storeLocation = store.location;
-// 		console.log(storeLocation);
-// 		let storeId = store._id;
-// 		let isCloseToCurrentUser =
-// 			distance(
-// 				storeLocation.lat,
-// 				storeLocation.long,
-// 				currentUserGeoLocation.lat,
-// 				currentUserGeoLocation.lng,
-// 				"K"
-// 			) < 5;
+	Store.find({}, (err, stores) => {
+		let storeLocation = store.location;
+		console.log(storeLocation);
+		let storeId = store._id;
+		itemsAround = stores;
+		let isCloseToCurrentUser =
+			distance(
+				storeLocation.lat,
+				storeLocation.long,
+				currentUserGeoLocation.lat,
+				currentUserGeoLocation.lng,
+				"K"
+			) < 5;
 
-// 		if (isCloseToCurrentUser) {
-// 			Item.find({ storeId: storeId }, (err, item) => {
-// 				result.push(item);
-// 			});
-// 		}
-// 	});
+		if (isCloseToCurrentUser) {
+			Item.find({ storeId: storeId }, (err, item) => {
+				itemsAround.push(item);
+			});
+		}
+	});
 
-// 	res.json({
-// 		itemsAround: currentUserGeoLocation
-// 	});
-// });
+	res.json({
+		itemsAround: itemsAround
+	});
+});
 
 function distance(lat1, lon1, lat2, lon2, unit) {
 	if (lat1 == lat2 && lon1 == lon2) {
