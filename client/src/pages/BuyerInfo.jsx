@@ -46,7 +46,6 @@ function BuyerInfo() {
   const [storeCountry, setStoreCountry] = useState("");
   const [storePostal, setStorePostal] = useState("");
 
-  console.log(context);
   return (
     <Container>
       <Form
@@ -54,7 +53,8 @@ function BuyerInfo() {
           marginTop: "50px",
           height: "600px",
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
+          leftPadding: "5%"
           // justifyContent: "space-evenly"
         }}
       >
@@ -220,7 +220,7 @@ function BuyerInfo() {
                   textDecoration: "none",
                   color: "white"
                 }}
-                to="/dashboard"
+                to="/Storefront"
               >
                 Next
               </Link>

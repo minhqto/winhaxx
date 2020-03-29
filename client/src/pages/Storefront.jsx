@@ -12,6 +12,8 @@ import {
   FormText,
   CustomInput
 } from "reactstrap";
+import Item from "../components/item/Item";
+import ItemW from "../components/item/Item(Windsor)";
 
 function Storefront() {
   return (
@@ -22,7 +24,7 @@ function Storefront() {
             style={{
               marginTop: "5%",
               marginLeft: "10%",
-              height: "600px",
+              height: "5%",
               display: "flex",
               flexDirection: "column"
               // justifyContent: "space-evenly"
@@ -40,7 +42,29 @@ function Storefront() {
         </Col>
       </Row>
 
-      <div id="items"></div>
+      <Row>
+        <Col sm="4">
+          <Item />
+        </Col>
+        <Col sm="4">
+          <Item />
+        </Col>
+        <Col sm="4">
+          <Item />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col sm="4">
+          <ItemW />
+        </Col>
+        <Col sm="4">
+          <ItemW />
+        </Col>
+        <Col sm="4">
+          <ItemW />
+        </Col>
+      </Row>
     </Fragment>
   );
 }

@@ -36,6 +36,7 @@ const App = () => {
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/business" component={BusinessInformation} />
             <Route exact path="/buyer" component={BuyerInfo} />
+            <Route exact path="/Storefront" component={Storefront} />
           </Switch>
         </Fragment>
       </Router>

@@ -13,15 +13,15 @@ import {
 
 import image from "../../img/showcase.jpg";
 
-function Item() {
+function ItemW() {
   return (
     <div style={{ width: "250px" }}>
       <Card>
         <img width="100%" src={image} alt="Card image cap" />
         <CardBody>
           <CardTitle style={{ fontWeight: "bold" }}>Soap</CardTitle>
-          <CardSubtitle>Toronto Store</CardSubtitle>
-          <CardText>1km away</CardText>
+          <CardSubtitle>Windsor Store</CardSubtitle>
+          <CardText>370km away</CardText>
           <Badge
             style={{
               backgroundColor: "#FFF6EC",
@@ -46,4 +46,4 @@ function Item() {
   );
 }
 
-export default Item;
+export default ItemW;
