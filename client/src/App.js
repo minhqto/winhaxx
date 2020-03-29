@@ -15,55 +15,32 @@ import Storefront from "./pages/Storefront";
 export const AppContext = React.createContext({});
 
 const App = () => {
-<<<<<<< HEAD
+  // Global state
+  const [userGeoLocation, setUserGeoLocation] = useState(null);
+  const [itemsAround, setItemsAround] = useState([]);
+
+  const store = {
+    userGeoLocation: { get: userGeoLocation, set: setUserGeoLocation },
+    itemsAround: { get: itemsAround, set: setItemsAround }
+  };
+
   return (
-    <Router>
-      <Fragment>
-        <NavbarTop></NavbarTop>
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/signin" component={SignIn} />
-          <Route exact path="/business" component={BusinessInformation} />
-          <Route exact path="/buyer" component={BuyerInfo} />
-          <Route exact path="/Storefront" component={Storefront} />
-        </Switch>
-      </Fragment>
-    </Router>
+    <AppContext.Provider value={store}>
+      <Router>
+        <Fragment>
+          <NavbarTop></NavbarTop>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/business" component={BusinessInformation} />
+            <Route exact path="/buyer" component={BuyerInfo} />
+          </Switch>
+        </Fragment>
+      </Router>
+    </AppContext.Provider>
   );
-=======
-	// Global state
-	const [userGeoLocation, setUserGeoLocation] = useState(null);
-	const [itemsAround, setItemsAround] = useState([]);
-
-	const store = {
-		userGeoLocation: { get: userGeoLocation, set: setUserGeoLocation },
-		itemsAround: { get: itemsAround, set: setItemsAround }
-	};
-
-	return (
-		<AppContext.Provider value={store}>
-			<Router>
-				<Fragment>
-					<NavbarTop></NavbarTop>
-					<Switch>
-						<Route exact path="/" component={LandingPage} />
-						<Route exact path="/dashboard" component={Dashboard} />
-						<Route exact path="/signup" component={SignUp} />
-						<Route exact path="/signin" component={SignIn} />
-						<Route
-							exact
-							path="/business"
-							component={BusinessInformation}
-						/>
-						<Route exact path="/buyer" component={BuyerInfo} />
-					</Switch>
-				</Fragment>
-			</Router>
-		</AppContext.Provider>
-	);
->>>>>>> 49c91dc378cd3a0f0f6cdd298eb51d5e1fb9f176
 };
 
 export default App;

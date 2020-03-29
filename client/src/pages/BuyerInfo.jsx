@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -13,7 +13,28 @@ import {
   CustomInput
 } from "reactstrap";
 
+import { AppContext } from "../App";
+
 function BuyerInfo() {
+  const context = useContext(AppContext);
+  async function onClick() {
+    let res = await fetch("/api/users/getGeoLocation", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({ address: "65 Misty Meadow Dr" })
+    });
+    res
+      .json()
+      .then(result => {
+        context.userGeoLocation.set(result);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
   const [isStoreOwner, setIsStoreOwner] = useState(false);
   const [typeOfGoodsSold, setTypeOfGoodSold] = useState("");
   const [buyerFirstName, setBuyerFirstName] = useState("");
@@ -25,6 +46,7 @@ function BuyerInfo() {
   const [storeCountry, setStoreCountry] = useState("");
   const [storePostal, setStorePostal] = useState("");
 
+  console.log(context);
   return (
     <Container>
       <Form
@@ -208,18 +230,6 @@ function BuyerInfo() {
       </Form>
     </Container>
   );
-}
-
-async function onClick() {
-  let res = await fetch("/api/users/getGeoLocation", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json"
-    },
-    body: JSON.stringify({ address: "65 Misty Meadow Dr" })
-  });
-  console.log("hello");
-  console.log(res.json());
 }
 
 export default BuyerInfo;
