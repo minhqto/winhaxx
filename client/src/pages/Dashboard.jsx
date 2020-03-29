@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import Item from "../components/item/Item";
 
 const Dashboard = () => {
 	const [users, setUsers] = useState([]);
@@ -26,6 +27,8 @@ const Dashboard = () => {
 					<li>{user.name}</li>
 				))}
 			</ul>
+
+			<Item />
 		</Fragment>
 	);
 };

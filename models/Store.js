@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 const storeSchema = new Schema({
 	storeName: String,
 	address: String,
-	position: {
+	location: {
 		lat: Number,
 		long: Number
 	}
 });
 
-module.exports = Store = mongoose.model("stashdb_vendors", storeSchema);
+module.exports = Store = mongoose.model("store", storeSchema);
