@@ -3,6 +3,7 @@ const db = require("./config/db");
 const path = require("path");
 const app = express();
 const store = require("./routes/api/store.js");
+const bodyParser = require("body-parser");
 
 // Connect Database
 db.connectDB()
@@ -16,6 +17,9 @@ db.connectDB()
 
 // Init Middleware
 app.use(express.json({ extended: false }));
+app.use(bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Define Routes
 app.use("/api/users", require("./routes/api/users"));

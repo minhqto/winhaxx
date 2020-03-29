@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const fetch = require("node-fetch");
 const User = require("../../models/User");
 
 // @route    GET api/users
@@ -12,6 +12,24 @@ router.get("/", (req, res) => {
 			res.json(users);
 		}
 	});
+});
+
+// @route    GET api/users
+// @desc     Get users
+// @access   Public
+router.post("/getGeoLocation", async (req, res) => {
+	console.log(geoCodeAPI);
+	let addressStr = req.body.address.split(" ").join("+");
+
+	let apiResult = await fetch(
+		`https://maps.googleapis.com/maps/api/geocode/json?address=${addressStr}&key=AIzaSyDXtWIvVcXq6nVbqfmoV1qwx4YTyM2Q5Es`
+	);
+
+	fetch(
+		`https://maps.googleapis.com/maps/api/geocode/json?address=${addressStr}&key=AIzaSyDXtWIvVcXq6nVbqfmoV1qwx4YTyM2Q5Es`
+	)
+		.then(res => res.json())
+		.then(json => res.json(json.results[0].geometry.location));
 });
 
 module.exports = router;
