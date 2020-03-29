@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("./config/db");
 const path = require("path");
 const app = express();
-const store = require("./routes/api/store.js");
+const store = require("./routes/api/stores.js");
 const bodyParser = require("body-parser");
 
 // Connect Database
@@ -23,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Define Routes
 app.use("/api/users", require("./routes/api/users"));
+app.use("/api/stores", require("./routes/api/stores"));
+app.use("/api/items", require("./routes/api/items"));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
