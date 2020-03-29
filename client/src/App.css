@@ -93,3 +93,8 @@
   left: 15%;
   top: 65%;
 }
+
+.hyperlink {
+  text-decoration: none;
+  color: white;
+}
