@@ -17,13 +17,8 @@ router.get("/", (req, res) => {
 // @route    GET api/users
 // @desc     Get users
 // @access   Public
-router.post("/getGeoLocation", async (req, res) => {
-	console.log(geoCodeAPI);
+router.post("/getGeoLocation", (req, res) => {
 	let addressStr = req.body.address.split(" ").join("+");
-
-	let apiResult = await fetch(
-		`https://maps.googleapis.com/maps/api/geocode/json?address=${addressStr}&key=AIzaSyDXtWIvVcXq6nVbqfmoV1qwx4YTyM2Q5Es`
-	);
 
 	fetch(
 		`https://maps.googleapis.com/maps/api/geocode/json?address=${addressStr}&key=AIzaSyDXtWIvVcXq6nVbqfmoV1qwx4YTyM2Q5Es`

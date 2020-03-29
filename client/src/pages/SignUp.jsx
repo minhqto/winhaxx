@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
 	Container,
@@ -12,7 +12,11 @@ import {
 	FormText
 } from "reactstrap";
 
+import { AppContext } from "../App";
+
 function SignUp() {
+	const context = useContext(AppContext);
+
 	return (
 		<Container style={{ padding: "10%" }}>
 			<Form
@@ -33,6 +37,9 @@ function SignUp() {
 						name="email"
 						id="email"
 						placeholder="Email"
+						onChange={e =>
+							context.userGeoLocation.set(e.target.value)
+						}
 					/>
 				</FormGroup>
 				<FormGroup>
